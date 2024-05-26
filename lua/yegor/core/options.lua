@@ -1,5 +1,7 @@
 vim.cmd("let g:netrw_liststyle = 0")
 vim.cmd('let g:netrw_bufsettings="noma nomod nu nobl nowrap ro rnu"')
+vim.cmd("let g:netrw_keepdir = 0")
+vim.cmd("hi! link netrwMarkFile Search")
 
 local opt = vim.opt
 

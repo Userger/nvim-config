@@ -1,0 +1,9 @@
+-- local NetrwIsOpen = 0
+-- function ToggleNetrw()
+-- 	print("hello")
+-- 	if NetrwIsOpen then
+-- 		NetrwIsOpen = 0
+-- 	else
+-- 		NetrwIsOpen = 1
+-- 	end
+-- end

@@ -21,7 +21,9 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) 
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- file explorer
-keymap.set("n", "<leader>ee", vim.cmd.Ex, { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+-- keymap.set("n", "<leader>ee", ":Rexplore<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+-- keymap.set("n", "<leader>ee", ":call ToggleNetrw()<CR>", { desc = "Open netrw" }) --  move current buffer to new tab
+keymap.set("n", "<leader>ee", ":call ToggleExplorer()<CR>", { desc = "Open netrw" }) --  move current buffer to new tab
 
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -37,3 +39,10 @@ keymap.set("n", "N", "Nzzzv")
 keymap.set("n", "Q", "<nop>")
 
 keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+keymap.set("n", "m", "=")
+keymap.set("v", "m", "=")
+
+keymap.set("n", "<tab>", "<nop>")
+
+keymap.set("n", "ef", ":lua ToggleNetrw()<CR>")
