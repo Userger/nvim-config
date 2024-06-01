@@ -25,10 +25,12 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 -- keymap.set("n", "<leader>ee", ":call ToggleNetrw()<CR>", { desc = "Open netrw" }) --  move current buffer to new tab
 keymap.set("n", "<leader>ee", ":call ToggleExplorer()<CR>", { desc = "Open netrw" }) --  move current buffer to new tab
 
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+-- keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 keymap.set("n", "J", "mzJ`z")
+keymap.set("v", "J", "j")
+keymap.set("v", "K", "k")
 
 keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "<C-d>", "<C-d>zz")
@@ -42,7 +44,6 @@ keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 keymap.set("n", "m", "=")
 keymap.set("v", "m", "=")
+keymap.set("n", "M", "V=")
 
 keymap.set("n", "<tab>", "<nop>")
-
-keymap.set("n", "ef", ":lua ToggleNetrw()<CR>")
